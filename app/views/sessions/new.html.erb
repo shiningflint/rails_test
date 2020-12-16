@@ -1,0 +1,17 @@
+<div>
+  <h1>ログイン</h1>
+
+  <% if @validation_errors.present? %>
+    <%= render 'sessions/errors', errors: @validation_errors %>
+  <% end %>
+
+  <%= form_with url: '/login', method: :post do |form| %>
+    <%= form.label :name, 'ユーザーID' %>
+    <%= form.text_field :name %>
+    <br/>
+    <%= form.label :name, 'パスワード' %>
+    <%= form.password_field :password %>
+    <br/>
+    <%= form.submit 'ログインする' %>
+  <% end %>
+</div>

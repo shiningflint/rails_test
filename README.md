@@ -21,4 +21,7 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+## How to run
+- Run migration `rake db:migrate`
+- Run seed for user creation `rake db:seed`
+- Run server `rails s`
