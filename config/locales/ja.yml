@@ -1,0 +1,24 @@
+ja:
+  activerecord:
+    attributes:
+      photo:
+        title: 'タイトル'
+        photo_file: '画像ファイル'
+      user:
+        name: 'ユーザーID'
+        password: 'パスワード'
+    errors:
+      models:
+        photo:
+          attributes:
+            title:
+              blank: 'を入力してください。'
+              too_long: 'を30文字以下に入力してください。'
+            photo_file:
+              blank: 'を入力してください。'
+        user:
+          attributes:
+            name:
+              blank: 'を入力してください。'
+            password:
+              blank: 'を入力してください。'

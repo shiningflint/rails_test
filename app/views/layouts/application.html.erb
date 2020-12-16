@@ -12,6 +12,20 @@
 
   <body>
     <%= link_to 'ログアウト', logout_path, method: :delete %>
+
+    <h1><%= yield(:title) %></h1>
+
+    <% flash.each do |type, messages| %>
+      <% if type == 'error' %>
+      <div class="flash-wrapper error mb-2">
+        <% messages.each do |msg| %>
+          - <%= msg %>
+          <br />
+        <% end %>
+      </div>
+      <% end %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
