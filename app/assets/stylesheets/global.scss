@@ -1,0 +1,19 @@
+$rem-unit: 16px;
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.flash-wrapper {
+  &.error {
+    color: red;
+  }
+}
+
+.mb-1 {
+  margin-bottom: 1 * $rem-unit;
+}
+.mb-2 {
+  margin-bottom: 2 * $rem-unit;
+}

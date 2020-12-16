@@ -1,4 +1,5 @@
 class SessionForm
+
   attr_reader :errors
 
   def initialize (params)
@@ -7,13 +8,16 @@ class SessionForm
   end
 
   def validate!
-    # TODO: Use translated model names in I18n object in the future
     unless @params[:name].present?
-      @errors << 'ユーザーIDを入力して下さい！'
+      user_id = I18n.t 'activerecord.attributes.user.name'
+      user_id_blank = I18n.t 'activerecord.errors.models.user.attributes.name.blank'
+      @errors << "#{user_id}#{user_id_blank}"
     end
 
     unless @params[:password].present?
-      @errors << 'パスワードを入力して下さい！'
+      password = I18n.t 'activerecord.attributes.user.password'
+      password_blank = I18n.t 'activerecord.errors.models.user.attributes.password.blank'
+      @errors << "#{password}#{password_blank}"
     end
 
     true unless @errors.any?

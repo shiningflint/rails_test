@@ -1,0 +1,15 @@
+<% content_for(:title) { '写真一覧' } %>
+<div>
+  <div class="mb-2">
+    <%= link_to '写真新規追加', edit_user_path(id: @user.id) %>
+  </div>
+
+  <div class="photo-wrapper">
+    <% @user_photos.each do |photo| %>
+    <div class="photo-item">
+      <div class="title"><%= photo.title %></div>
+      <div class="image"><%= image_tag url_for(photo.photo_file) %></div>
+    </div>
+    <% end %>
+  </div>
+</div>
