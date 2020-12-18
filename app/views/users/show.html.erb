@@ -16,7 +16,20 @@
     <% @user_photos.each do |photo| %>
     <div class="photo-item">
       <div class="title"><%= photo.title %></div>
-      <div class="image"><%= image_tag url_for(photo.photo_file) %></div>
+      <div class="image mb-1"><%= image_tag url_for(photo.photo_file) %></div>
+
+      <% if @tweet_token_present %>
+      <div class="text-center">
+        <%=
+          link_to(
+            'ツイートする',
+            tweets_path(title: photo.title, photo_url: rails_blob_url(photo.photo_file)),
+            class: 'button',
+            method: :post
+          )
+        %>
+      </div>
+      <% end %>
     </div>
     <% end %>
   </div>

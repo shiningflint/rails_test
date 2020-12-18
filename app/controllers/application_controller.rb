@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :authorize_admin!
 
   def index
-    redirect_to user_path(id: session[:user_id])
+    redirect_to user_path(id: current_user.id)
   end
 
   private
