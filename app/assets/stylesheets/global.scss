@@ -1,4 +1,6 @@
 $rem-unit: 16px;
+$gray-button-bg: #d2d2d2;
+$gray-button-text: #4a4a4a;
 
 img {
   max-width: 100%;
@@ -16,4 +18,17 @@ img {
 }
 .mb-2 {
   margin-bottom: 2 * $rem-unit;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 2px;
+  text-decoration: none;
+  background-color: $gray-button-bg;
+  color: $gray-button-text;
+  padding: ($rem-unit / 2) $rem-unit;
 }

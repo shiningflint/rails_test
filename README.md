@@ -1,27 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-## How to run
+## How to run, after cloning this repo
+- Login to the Heroku test app
+- Create `.env` file, refer to `.env.example` file
 - Run migration `rake db:migrate`
 - Run seed for user creation `rake db:seed`
 - Run server `rails s`
+
+## クローンしたとの手続き
+- ヘロクのテストアプリにログイン
+- `.env`を作成。`.env.example`のファイルに参考してください。
+- migration コマンドをする `rake db:migration`
+- seed コマンドをする `rake db:seed`
+- rails serverを起動する `rails s`

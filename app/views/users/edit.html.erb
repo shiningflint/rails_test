@@ -12,6 +12,6 @@
 
     <br />
     <%= form.submit 'アップロード' %>
-    <%= link_to 'キャンセル', user_path(id: params[:id]) %>
+    <%= link_to 'キャンセル', user_path(id: @user.id) %>
   <% end %>
 </div>
