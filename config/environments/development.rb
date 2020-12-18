@@ -72,6 +72,12 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.i18n.default_locale = 'ja'
 
+  # Oauth2 configuration using the `oauth2` gem
+  config.x.oauth.client_id = ENV['TWEET_CLIENT_ID']
+  config.x.oauth.client_secret = ENV['TWEET_CLIENT_SECRET']
+  config.x.oauth.idp_url = 'https://arcane-ravine-29792.herokuapp.com'
+  config.x.oauth.redirect_uri = 'http://localhost:3000/oauth/callback'
+
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
 end
