@@ -30,6 +30,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
+    session[:tweet_token] = nil
     redirect_to login_path
   end
 

@@ -6,5 +6,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :edit]
   resources :photos, only: [:create]
+
+  #oauth2 routes
+  get '/oauth/callback', to: 'oauth#oauth_callback'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

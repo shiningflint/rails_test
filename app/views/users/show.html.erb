@@ -1,6 +1,14 @@
 <% content_for(:title) { '写真一覧' } %>
 <div>
   <div class="mb-2">
+    <% if @tweet_token_present %>
+      <span>MyTweetAppと連携中</span>
+    <% else %>
+      <%= link_to 'MyTweetAppと連携', @tweet_oauth_link %>
+    <% end %>
+  </div>
+
+  <div class="mb-2">
     <%= link_to '写真新規追加', edit_user_path(id: @user.id) %>
   </div>
 
